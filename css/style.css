@@ -109,6 +109,15 @@ header * {
   color: #FFFFFF;
 }
 
+h1 {
+  font-size: 60px;
+}
+
+h1 ~ p {
+  font-size: 18px;
+  line-height: 180%;
+}
+
 header {
   background-image: url("../images/theme_slider2_bg-1.jpg");
   background-size: cover;
@@ -139,4 +148,31 @@ header > * {
 
 .logo {
   width: 240px;
+}
+
+#hero {
+  width: 50%;
+  margin: auto;
+  padding: 100px 0;
+  text-align: center;
+}
+
+#side-bar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #E9D758;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#side-bar > * {
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.fa-life-ring {
+  transform: rotate(45deg);
 }
