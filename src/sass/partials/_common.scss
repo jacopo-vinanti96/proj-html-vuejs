@@ -1,0 +1,22 @@
+// Reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+// Repeated classes
+@for $i from 1 through 20 {
+  .mt-#{$i * 5} {
+    margin-top: $i * 5px;
+  }
+}
+
+.flex_row {
+  display: flex;
+  justify-content: space-around;
+}
