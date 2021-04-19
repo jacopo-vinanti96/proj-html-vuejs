@@ -1,0 +1,32 @@
+.btn {
+
+  &--function {
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--big {
+    padding: 25px 40px;
+    border-radius: 40px;
+    font-size: $font_size_300;
+  }
+
+  &--primary {
+    background-color: $bg_color_primary;
+    color: $font_color_light;
+  }
+
+  &--secondary {
+    background-color: $bg_color_secondary;
+    color: $font_color_light;
+  }
+
+  &--inverted {
+    background-color: $font_color_light;
+    color: $bg_color_primary;
+  }
+
+
+}

@@ -105,6 +105,10 @@ p, input, span {
   font-family: sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 header * {
   color: #FFFFFF;
 }
@@ -118,10 +122,35 @@ h1 ~ p {
   line-height: 180%;
 }
 
+.btn--function {
+  border: none;
+}
+.btn--function:focus {
+  outline: none;
+}
+.btn--big {
+  padding: 25px 40px;
+  border-radius: 40px;
+  font-size: 16px;
+}
+.btn--primary {
+  background-color: #E56768;
+  color: #FFFFFF;
+}
+.btn--secondary {
+  background-color: #E9D758;
+  color: #FFFFFF;
+}
+.btn--inverted {
+  background-color: #FFFFFF;
+  color: #E56768;
+}
+
 header {
   background-image: url("../images/theme_slider2_bg-1.jpg");
   background-size: cover;
   position: relative;
+  padding-bottom: 120px;
 }
 header::before {
   position: absolute;
@@ -131,6 +160,15 @@ header::before {
   left: 0;
   right: 0;
   background-color: #DA5F60E6;
+}
+header::after {
+  content: "";
+  background-image: url("../images/wave-1.png");
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  height: 120px;
+  width: 100%;
 }
 header > * {
   position: relative;

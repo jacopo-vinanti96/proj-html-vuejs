@@ -2,6 +2,7 @@ header {
   background-image: url('../images/theme_slider2_bg-1.jpg');
   background-size: cover;
   position: relative;
+  padding-bottom: 120px;
 
   &::before {
     position: absolute;
@@ -11,6 +12,16 @@ header {
     left: 0;
     right: 0;
     background-color: $bg_color_overlay;
+  }
+
+  &::after {
+    content: '';
+    background-image: url('../images/wave-1.png');
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
   }
 
   > * {
