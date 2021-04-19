@@ -1,16 +1,30 @@
 .btn {
+  display: inline-block;
 
   &--function {
     border: none;
     &:focus {
       outline: none;
     }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &--big,
+  &--medium {
+    padding: 0 40px;
+    border-radius: 40px;
+    font-size: $font_size_300;
   }
 
   &--big {
-    padding: 25px 40px;
-    border-radius: 40px;
-    font-size: $font_size_300;
+    height: 70px;
+  }
+
+  &--medium {
+    height: 64px;
+    line-height: 64px;
   }
 
   &--primary {
@@ -29,4 +43,10 @@
   }
 
 
+}
+
+main {
+  .btn {
+    box-shadow: 0 0 20px -3px $border_color_5;
+  }
 }

@@ -16,12 +16,14 @@ ul {
   }
 }
 
-
-.flex_row {
+.flex_center {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.flex_center {
-  align-items: center;
+.container--medium {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
 }
