@@ -90,17 +90,53 @@ ul {
 
 .flex_row {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.flex_center {
+  align-items: center;
 }
 
 * {
-  font-family: sans-serif;
-}
-
-h1, h2, h3, h4, .btn {
   font-family: "Fredoka One", sans-serif;
 }
 
+p, input, span {
+  font-family: sans-serif;
+}
+
+header * {
+  color: #FFFFFF;
+}
+
+header {
+  background-image: url("../images/theme_slider2_bg-1.jpg");
+  background-size: cover;
+  position: relative;
+}
+header::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #DA5F60E6;
+}
+header > * {
+  position: relative;
+  z-index: 3;
+}
+
+#top-bar {
+  padding: 50px 45px 0;
+}
+
+#top-bar li:not(:last-child),
+#hero .btn:not(:last-child) {
+  margin-right: 20px;
+}
+
 .logo {
-  width: 200px;
+  width: 240px;
 }

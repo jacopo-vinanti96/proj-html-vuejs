@@ -1,8 +1,12 @@
 // General
 * {
+  font-family: 'Fredoka One', sans-serif;
+}
+
+p, input, span {
   font-family: sans-serif;
 }
 
-h1, h2, h3, h4, .btn {
-  font-family: 'Fredoka One', sans-serif;
+header * {
+  color: $font_color_light;
 }
