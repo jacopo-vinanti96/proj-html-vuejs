@@ -3,6 +3,7 @@ header {
   background-size: cover;
   position: relative;
   padding-bottom: 120px;
+  overflow: hidden;
 
   &::before {
     position: absolute;
@@ -20,8 +21,9 @@ header {
     background-size: cover;
     position: absolute;
     bottom: 0;
-    height: 120px;
-    width: 100%;
+    left: -10%;
+    height: 133px;
+    width: 2116px;
   }
 
   > * {

@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+.btn {
+  font-size: $font_size_300;
+}
+
 // Header
 header * {
   color: $font_color_light;
@@ -25,9 +29,14 @@ h1 ~ p {
   line-height: 180%;
 }
 
+// Main
+
+h2, h3 {
+  color: $font_color_11;
+}
+
 h2 {
   font-size: $font_size_800;
-  color: $font_color_11;
 }
 
 h2 ~ p {
@@ -36,4 +45,19 @@ h2 ~ p {
 
 p {
   line-height: 150%;
+}
+
+.faculty_box h3 {
+  color: $font_color_primary;
+}
+
+.faculty_overview {
+
+  h3 {
+  font-size: $font_size_700;
+  }
+  p {
+    color: $font_color_2;
+  }
+
 }

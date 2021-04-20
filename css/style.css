@@ -101,6 +101,14 @@ ul {
   margin-left: auto;
 }
 
+.container--small {
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  left: 3%;
+}
+
 * {
   font-family: "Fredoka One", sans-serif;
 }
@@ -111,6 +119,10 @@ p, input, span {
 
 a {
   text-decoration: none;
+}
+
+.btn {
+  font-size: 16px;
 }
 
 header * {
@@ -126,9 +138,12 @@ h1 ~ p {
   line-height: 180%;
 }
 
+h2, h3 {
+  color: #223441;
+}
+
 h2 {
   font-size: 45px;
-  color: #223441;
 }
 
 h2 ~ p {
@@ -137,6 +152,17 @@ h2 ~ p {
 
 p {
   line-height: 150%;
+}
+
+.faculty_box h3 {
+  color: #E56768;
+}
+
+.faculty_overview h3 {
+  font-size: 38px;
+}
+.faculty_overview p {
+  color: #8B8B8A;
 }
 
 .btn {
@@ -154,10 +180,10 @@ p {
 .btn--big, .btn--medium {
   padding: 0 40px;
   border-radius: 40px;
-  font-size: 16px;
 }
 .btn--big {
   height: 70px;
+  line-height: 70px;
 }
 .btn--medium {
   height: 64px;
@@ -185,6 +211,7 @@ header {
   background-size: cover;
   position: relative;
   padding-bottom: 120px;
+  overflow: hidden;
 }
 header::before {
   position: absolute;
@@ -201,8 +228,9 @@ header::after {
   background-size: cover;
   position: absolute;
   bottom: 0;
-  height: 120px;
-  width: 100%;
+  left: -10%;
+  height: 133px;
+  width: 2116px;
 }
 header > * {
   position: relative;
@@ -289,4 +317,42 @@ details > summary::after {
 
 .feature_box__img {
   width: 45%;
+}
+
+#faculties {
+  margin-top: 200px;
+}
+#faculties h2, #faculties h2 ~ p {
+  text-align: center;
+}
+#faculties h2 ~ p {
+  width: 365px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.selector__bar {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 15px #ECECEE;
+  border-top: 1px solid #ECECEE;
+  border-bottom: 1px solid #ECECEE;
+}
+
+.faculty_box {
+  padding: 42px 70px;
+  border-left: 1px solid #ECECEE;
+  border-right: 1px solid #ECECEE;
+}
+.faculty_box img {
+  width: 108px;
+}
+
+.faculty_overview__img {
+  width: 35%;
+}
+
+.faculty_overview__text {
+  width: 55%;
+  text-align: left;
 }
