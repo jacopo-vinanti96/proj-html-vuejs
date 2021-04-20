@@ -1,3 +1,4 @@
+// General settings
 .btn {
   display: inline-block;
   white-space: nowrap;
@@ -35,6 +36,13 @@
     border-radius: 20px;
   }
 
+  &--small {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px;
+    border-radius: 30px;
+  }
+
   &--primary {
     background-color: $bg_color_primary;
     color: $font_color_light;
@@ -53,8 +61,15 @@
 
 }
 
+// Shadows
 main {
   .btn {
     box-shadow: 0 0 20px -3px $border_color_5;
+  }
+
+  .section--inverted {
+    .btn {
+      box-shadow: 0 0 25px -10px $bg_color_dark_2;
+    }
   }
 }

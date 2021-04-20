@@ -1,0 +1,20 @@
+#latest {
+  position: relative;
+  overflow: hidden;
+  padding: 133px 0;
+
+  &::before {
+    background-color: $bg_color_primary;
+    @include section-decoration;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    @include section-decoration;
+    top: 0;
+    left: 0;
+  }
+
+
+}

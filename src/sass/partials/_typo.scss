@@ -89,3 +89,14 @@ p {
     font-size: $font_size_200;
   }
 }
+
+#latest {
+  .exposition_card
+  span {
+    color: $font_color_7;
+    font-size: $font_size_200;
+  }
+  h3 {
+    font-size: $font_size_500;
+  }
+}

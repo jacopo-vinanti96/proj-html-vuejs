@@ -194,6 +194,14 @@ p {
   font-size: 14px;
 }
 
+#latest .exposition_card span {
+  color: #434959;
+  font-size: 14px;
+}
+#latest h3 {
+  font-size: 20px;
+}
+
 .btn {
   display: inline-block;
   white-space: nowrap;
@@ -225,6 +233,12 @@ p {
   padding: 0 25px;
   border-radius: 20px;
 }
+.btn--small {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 30px;
+  border-radius: 30px;
+}
 .btn--primary {
   background-color: #E56768;
   color: #FFFFFF;
@@ -240,6 +254,9 @@ p {
 
 main .btn {
   box-shadow: 0 0 20px -3px #CCCCCC;
+}
+main .section--inverted .btn {
+  box-shadow: 0 0 25px -10px #000000CC;
 }
 
 header {
@@ -394,7 +411,7 @@ details > summary::after {
 }
 
 #schedule {
-  padding: 230px 0;
+  padding: 230px 0 100px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -445,14 +462,17 @@ details > summary::after {
 .exposition_card {
   position: relative;
   display: inline-block;
-  padding: 40px 35px;
-  border-radius: 18px;
+  padding: 40px 35px 55px;
 }
 .exposition_card:not(:last-child) {
   margin-right: 22px;
 }
 .exposition_card span {
   display: block;
+}
+.exposition_card span span.font--darker {
+  display: inline-block;
+  font-weight: bold;
 }
 .exposition_card .btn {
   position: absolute;
@@ -462,6 +482,44 @@ details > summary::after {
 }
 
 #schedule .exposition_card {
-  width: calc( 33% - 44px / 3 );
+  width: calc( 100% / 3 - 44px / 3 );
   background-color: #FFFFFF;
+  border-radius: 18px;
+}
+
+#latest .exposition_card {
+  width: calc( 25% - 66px / 4 );
+  box-shadow: 0 0 20px -3px #CCCCCC;
+  text-align: center;
+  border-radius: 8px;
+}
+#latest .exposition_card img {
+  width: 80px;
+}
+
+#latest {
+  position: relative;
+  overflow: hidden;
+  padding: 133px 0;
+}
+#latest::before {
+  background-color: #E56768;
+  content: "";
+  background-image: url("../images/wave-1.png");
+  background-size: cover;
+  position: absolute;
+  height: 133px;
+  width: 2116px;
+  top: 0;
+  left: 0;
+}
+#latest::after {
+  content: "";
+  background-image: url("../images/wave-1.png");
+  background-size: cover;
+  position: absolute;
+  height: 133px;
+  width: 2116px;
+  top: 0;
+  left: 0;
 }
