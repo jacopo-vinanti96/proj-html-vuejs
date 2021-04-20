@@ -10,7 +10,7 @@ ul {
 }
 
 // Repeated classes
-@for $i from 1 through 20 {
+@for $i from 1 through 26 {
   .mt-#{$i * 5} {
     margin-top: $i * 5px;
   }

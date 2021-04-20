@@ -9,3 +9,11 @@
 .feature_box__img {
   width: 45%;
 }
+
+#features {
+  .feature_box__text {
+    p {
+      width: 450px;
+    }
+  }
+}
