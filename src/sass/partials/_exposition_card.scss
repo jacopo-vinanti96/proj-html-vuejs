@@ -1,0 +1,26 @@
+.exposition_card {
+  position: relative;
+  display: inline-block;
+  padding: 40px 35px;
+  border-radius: 18px;
+  &:not(:last-child) {
+    margin-right: 22px;
+  }
+  span {
+    display: block;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate( -50%, 50%);
+  }
+}
+
+#schedule {
+  .exposition_card {
+    width: calc( 33% - 44px / 3 );
+    background-color: $bg_color_light;
+  }
+}

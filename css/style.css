@@ -178,8 +178,25 @@ p {
   color: #8B8B8A;
 }
 
+.schedule__table h3 {
+  font-size: 20px;
+}
+
+#schedule .exposition_card h3 {
+  color: #223441;
+  font-size: 28px;
+}
+#schedule .exposition_card span,
+#schedule .exposition_card p {
+  color: #74777B;
+}
+#schedule .exposition_card span {
+  font-size: 14px;
+}
+
 .btn {
   display: inline-block;
+  white-space: nowrap;
 }
 .btn--function {
   border: none;
@@ -201,6 +218,12 @@ p {
 .btn--medium {
   height: 64px;
   line-height: 64px;
+}
+.btn--xsmall {
+  height: 42px;
+  line-height: 38px;
+  padding: 0 25px;
+  border-radius: 20px;
 }
 .btn--primary {
   background-color: #E56768;
@@ -417,4 +440,28 @@ details > summary::after {
 .table__text--bottom {
   margin-top: 20px;
   left: -10%;
+}
+
+.exposition_card {
+  position: relative;
+  display: inline-block;
+  padding: 40px 35px;
+  border-radius: 18px;
+}
+.exposition_card:not(:last-child) {
+  margin-right: 22px;
+}
+.exposition_card span {
+  display: block;
+}
+.exposition_card .btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+#schedule .exposition_card {
+  width: calc( 33% - 44px / 3 );
+  background-color: #FFFFFF;
 }

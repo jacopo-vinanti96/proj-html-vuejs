@@ -1,5 +1,6 @@
 .btn {
   display: inline-block;
+  white-space: nowrap;
 
   &--function {
     border: none;
@@ -25,6 +26,13 @@
   &--medium {
     height: 64px;
     line-height: 64px;
+  }
+
+  &--xsmall {
+    height: 42px;
+    line-height: 38px;
+    padding: 0 25px;
+    border-radius: 20px;
   }
 
   &--primary {

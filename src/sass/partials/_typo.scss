@@ -67,3 +67,25 @@ p {
   }
 
 }
+
+.schedule__table {
+  h3 {
+    font-size: $font_size_500;
+  }
+}
+
+#schedule {
+  .exposition_card h3 {
+    color: $font_color_11;
+    font-size: $font_size_600;
+  }
+
+  .exposition_card span,
+  .exposition_card p {
+    color: $font_color_4;
+  }
+
+  .exposition_card span {
+    font-size: $font_size_200;
+  }
+}
