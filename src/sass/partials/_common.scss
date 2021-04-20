@@ -35,3 +35,21 @@ ul {
   position: relative;
   left: 3%;
 }
+
+.section--inverted {
+  background-color: $bg_color_primary;
+}
+
+@mixin section-decoration {
+  content: '';
+  background-image: url('../images/wave-1.png');
+  background-size: cover;
+  position: absolute;
+  height: 133px;
+  width: 2116px;
+}
+
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}

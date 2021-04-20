@@ -109,6 +109,15 @@ ul {
   left: 3%;
 }
 
+.section--inverted {
+  background-color: #E56768;
+}
+
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 * {
   font-family: "Fredoka One", sans-serif;
 }
@@ -123,6 +132,10 @@ a {
 
 .btn {
   font-size: 16px;
+}
+
+.section--inverted h2, .section--inverted h3, .section--inverted h4, .section--inverted span, .section--inverted p {
+  color: #FFFFFF;
 }
 
 header * {
@@ -227,10 +240,10 @@ header::after {
   background-image: url("../images/wave-1.png");
   background-size: cover;
   position: absolute;
-  bottom: 0;
-  left: -10%;
   height: 133px;
   width: 2116px;
+  bottom: 0;
+  left: -10%;
 }
 header > * {
   position: relative;
@@ -355,4 +368,53 @@ details > summary::after {
 .faculty_overview__text {
   width: 55%;
   text-align: left;
+}
+
+#schedule {
+  padding: 230px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+#schedule::before, #schedule::after {
+  content: "";
+  background-image: url("../images/wave-1.png");
+  background-size: cover;
+  position: absolute;
+  height: 133px;
+  width: 2116px;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+#schedule .container--schedule {
+  width: 68%;
+}
+#schedule .schedule__icon {
+  width: 65px;
+}
+
+.title--background {
+  background-color: #D8282A;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.schedule__table img {
+  width: 100%;
+}
+
+.table__text {
+  display: inline-block;
+  width: 35%;
+  position: relative;
+  margin: 0 2.5%;
+}
+.table__text--top {
+  left: 10%;
+}
+.table__text--bottom {
+  margin-top: 20px;
+  left: -10%;
 }

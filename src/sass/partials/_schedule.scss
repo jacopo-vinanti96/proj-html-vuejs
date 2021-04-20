@@ -1,0 +1,48 @@
+#schedule {
+  padding: 230px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  &::before,
+  &::after {
+    @include section-decoration;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  .container--schedule {
+    width: 68%;
+  }
+
+  .schedule__icon {
+    width: 65px;
+  }
+
+}
+
+.title--background {
+  background-color: $bg_color_title;
+  width: max-content;
+}
+
+.schedule__table img {
+  width: 100%;
+}
+
+.table__text {
+  display: inline-block;
+  width: 35%;
+  position: relative;
+  margin: 0 2.5%;
+
+  &--top {
+    left: 10%;
+  }
+
+  &--bottom {
+    margin-top: 20px;
+    left: -10%;
+  }
+}

@@ -15,6 +15,12 @@ a {
   font-size: $font_size_300;
 }
 
+.section--inverted {
+  h2, h3, h4, span, p {
+  color: $font_color_light;
+  }
+}
+
 // Header
 header * {
   color: $font_color_light;
