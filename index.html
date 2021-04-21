@@ -64,14 +64,16 @@
         </div>
     </header>
     <main>
-      <section class="feature_box flex_center mt-100 container--medium" id="presentation">
-        <div class="feature_box__text">
-          <img src="images/Books-icon.png" alt="thousands of courses icon">
-          <h2 class="mt-20">Thousands of courses for any type of student</h2>
-          <p class="mt-40">At EduPrime, it doesn't matter what domain you wish to pursue a career in. Here you can find a course that satisfies your needs within a click away and applies for a course in a matter of minutes. EduPrime is ranked as the most versatile university in the world, thanks to the number of courses it provides.</p>
-          <a class="btn btn--medium btn--secondary mt-35" href="#">Browse through courses</a>
+      <section class="pos-relative" id="presentation">
+        <div class="feature_box flex_center container--medium">
+          <div class="feature_box__text">
+            <img src="images/Books-icon.png" alt="thousands of courses icon">
+            <h2 class="mt-20">Thousands of courses for any type of student</h2>
+            <p class="mt-40">At EduPrime, it doesn't matter what domain you wish to pursue a career in. Here you can find a course that satisfies your needs within a click away and applies for a course in a matter of minutes. EduPrime is ranked as the most versatile university in the world, thanks to the number of courses it provides.</p>
+            <a class="btn btn--medium btn--secondary mt-35" href="#">Browse through courses</a>
+          </div>
+          <img src="images/Graduation-Illustration.png" alt="graduation illustration" class="feature_box__img">
         </div>
-        <img src="images/Graduation-Illustration.png" alt="graduation illustration" class="feature_box__img">
       </section>
       <section id="faculties">
         <h2>Faculties available at EduPrime</h2>
@@ -275,7 +277,7 @@
           </div>
           <h4 class="mt-30">Search categories</h4>
           <div class="mt-10">
-            <button v-for="query in footer.searchCategories" @click="inputQuery(query)" class="btn btn--function btn--primary-bordered btn--query mt-10" type="button" name="button">{{query}}</button>
+            <button v-for="query in footer.searchCategories" v-show="footer.search != query" @click="inputQuery(query)" class="btn btn--function btn--primary-bordered btn--query mt-10" type="button" name="button">{{query}}</button>
           </div>
           <span class="copyright mt-20">ModelTheme. All rights reserved.</span>
         </div>
