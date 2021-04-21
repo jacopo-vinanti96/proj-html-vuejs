@@ -250,7 +250,7 @@
   </main>
   <footer id="footer-root" class="section--inverted">
     <div class="container--medium flex_center">
-      <div class="footer__wrapper">
+      <div class="footer__wrapper-1">
         <img class="logo" src="images/theme_eduprime_logo.png" alt="Eduprime logo">
         <p class="mt-40">EduPrime is the most versatile WordPress theme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
         <ul class="socials flex_center mt-40">
@@ -259,16 +259,19 @@
           </li>
         </ul>
       </div>
-      <div class="footer__wrapper flex_center">
+      <div class="footer__wrapper-2 flex_center">
         <div v-for="col in footerLinks">
           <h4>{{col.title}}</h4>
-          <ul>
-            <li v-for="link in col.links"><a :href="link.href">{{link.text}}</a></li>
+          <ul class="mt-30">
+            <li class="mt-15" v-for="link in col.links"><a :href="link.href">{{link.text}}</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer__wrapper">
-
+      <div class="footer__wrapper-3">
+        <div class="input-text_container">
+          <input type="text" name="search-bar" value="" placeholder="Search...">
+          <button class="btn btn--function btn--secondary btn--circle" type="button" name="button"><i class="fas fa-search"></button>
+        </div>
       </div>
     </div>
   </footer>

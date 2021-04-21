@@ -150,9 +150,6 @@ ul {
   position: relative;
 }
 
-.input-text_container {
-  width: 42%;
-}
 .input-text_container input {
   padding-left: 5%;
   height: 70px;
@@ -261,6 +258,10 @@ p {
 
 footer h4 {
   font-size: 20px;
+}
+footer a {
+  font-family: "Mada", sans-serif;
+  font-size: 18px;
 }
 footer a:visited {
   color: white;
@@ -615,6 +616,9 @@ details > summary::after {
 #newsletter {
   padding: 60px 0;
 }
+#newsletter .input-text_container {
+  width: 42%;
+}
 
 #partners {
   padding-top: 80px;
@@ -650,9 +654,20 @@ details > summary::after {
 footer {
   padding: 170px 0 100px;
 }
+footer .input-text_container {
+  width: 100%;
+}
 
-.footer__wrapper {
-  width: 30%;
+.footer__wrapper-1 {
+  width: 33%;
+}
+
+.footer__wrapper-2 {
+  width: 29%;
+}
+
+.footer__wrapper-3 {
+  width: 29%;
 }
 
 .socials {

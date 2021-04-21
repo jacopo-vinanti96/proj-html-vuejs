@@ -118,6 +118,10 @@ footer {
   h4 {
     font-size: $font_size_500;
   }
+  a {
+    font-family: 'Mada', sans-serif;
+    font-size: $font_size_400;
+  }
   a:visited {
     color: white;
   }
