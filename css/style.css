@@ -259,6 +259,13 @@ p {
   font-size: 35px;
 }
 
+footer h4 {
+  font-size: 20px;
+}
+footer a:visited {
+  color: white;
+}
+
 .btn {
   display: inline-block;
   white-space: nowrap;
@@ -296,11 +303,16 @@ p {
   padding: 0 25px;
   border-radius: 20px;
 }
+.btn--circle, .btn--circle-small, .btn--social-inverted {
+  border-radius: 50%;
+}
 .btn--circle {
   width: 70px;
   height: 70px;
   line-height: 70px;
-  border-radius: 50%;
+}
+.btn--primary:visited .btn--secondary:visited .btn--social-inverted:visited {
+  color: #FFFFFF;
 }
 .btn--primary {
   background-color: #E56768;
@@ -313,6 +325,19 @@ p {
 .btn--inverted {
   background-color: #FFFFFF;
   color: #E56768;
+}
+.btn--inverted:visited {
+  color: #E56768;
+}
+.btn--social-inverted {
+  background-color: #E56768;
+  color: #FFFFFF;
+  border: 3px solid #E9D758;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main .btn {
@@ -628,4 +653,13 @@ footer {
 
 .footer__wrapper {
   width: 30%;
+}
+
+.socials {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.socials li:not(:last-child) {
+  margin-right: 15px;
 }

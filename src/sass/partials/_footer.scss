@@ -5,3 +5,10 @@ footer {
 .footer__wrapper {
   width: 30%;
 }
+
+.socials {
+  width: min-content;
+  li:not(:last-child) {
+    margin-right: 15px;
+  }
+}

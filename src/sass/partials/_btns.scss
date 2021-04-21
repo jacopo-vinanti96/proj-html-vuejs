@@ -43,11 +43,22 @@
     border-radius: 20px;
   }
 
+  &--circle,
+  &--circle-small,
+  &--social-inverted {
+    border-radius: 50%;
+  }
+
   &--circle {
     width: 70px;
     height: 70px;
     line-height: 70px;
-    border-radius: 50%;
+  }
+
+  &--primary:visited
+  &--secondary:visited
+  &--social-inverted:visited {
+    color: $font_color_light;
   }
 
   &--primary {
@@ -61,8 +72,23 @@
   }
 
   &--inverted {
-    background-color: $font_color_light;
-    color: $bg_color_primary;
+    background-color: $bg_color_light;
+    color: $font_color_primary;
+  }
+
+  &--inverted:visited {
+    color: $font_color_primary;
+  }
+
+  &--social-inverted {
+    background-color: $bg_color_primary;
+    color: $font_color_light;
+    border: 3px solid $border_color_secondary;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

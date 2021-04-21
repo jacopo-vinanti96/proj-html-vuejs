@@ -252,11 +252,20 @@
     <div class="container--medium flex_center">
       <div class="footer__wrapper">
         <img class="logo" src="images/theme_eduprime_logo.png" alt="Eduprime logo">
-        <p class="mt-40"></p>
-        <a v-for="social in socialLinks" class="btn btn--social-inverted" href="social.link"><i class="fab" :class="social.icon"></i></a>
+        <p class="mt-40">EduPrime is the most versatile WordPress theme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
+        <ul class="socials flex_center mt-40">
+          <li v-for="social in socialLinks">
+            <a class="btn btn--social-inverted" :href="social.link"><i class="fab" :class="social.icon"></i></a>
+          </li>
+        </ul>
       </div>
-      <div class="footer__wrapper">
-
+      <div class="footer__wrapper flex_center">
+        <div v-for="col in footerLinks">
+          <h4>{{col.title}}</h4>
+          <ul>
+            <li v-for="link in col.links"><a :href="link.href">{{link.text}}</a></li>
+          </ul>
+        </div>
       </div>
       <div class="footer__wrapper">
 
