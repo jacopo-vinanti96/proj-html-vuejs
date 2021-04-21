@@ -53,3 +53,21 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
+
+.pos-relative {
+  position: relative;
+}
+
+.input-text_container {
+  width: 42%;
+  input {
+    height: 70px;
+    border-radius: 70px;
+    border: none;
+    width: 100%;
+  }
+  .btn {
+    position: absolute;
+    right: 0;
+  }
+}

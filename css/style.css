@@ -142,12 +142,31 @@ ul {
   margin-right: auto;
 }
 
+.pos-relative {
+  position: relative;
+}
+
+.input-text_container {
+  width: 42%;
+}
+.input-text_container input {
+  height: 70px;
+  border-radius: 70px;
+  border: none;
+  width: 100%;
+}
+.input-text_container .btn {
+  position: absolute;
+  right: 0;
+}
+
 * {
   font-family: "Fredoka One", sans-serif;
 }
 
 p, input, span {
-  font-family: sans-serif;
+  font-family: "Mada", sans-serif;
+  font-size: 18px;
 }
 
 a {
@@ -171,7 +190,7 @@ h1 {
 }
 
 h1 ~ p {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 180%;
 }
 
@@ -214,16 +233,23 @@ p {
 #schedule .exposition_card p {
   color: #74777B;
 }
+#schedule .exposition_card p {
+  font-size: 17px;
+}
 #schedule .exposition_card span {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #latest .exposition_card span {
   color: #434959;
-  font-size: 14px;
+  font-size: 16px;
 }
 #latest h3 {
   font-size: 20px;
+}
+
+#newsletter h3 {
+  font-size: 35px;
 }
 
 .btn {
@@ -251,17 +277,23 @@ p {
   height: 64px;
   line-height: 64px;
 }
+.btn--small {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 30px;
+  border-radius: 30px;
+}
 .btn--xsmall {
   height: 42px;
   line-height: 38px;
   padding: 0 25px;
   border-radius: 20px;
 }
-.btn--small {
-  height: 50px;
-  line-height: 50px;
-  padding: 0 30px;
-  border-radius: 30px;
+.btn--circle {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
 }
 .btn--primary {
   background-color: #E56768;
@@ -553,5 +585,5 @@ details > summary::after {
 }
 
 #newsletter {
-  padding: 80px 0;
+  padding: 60px 0;
 }

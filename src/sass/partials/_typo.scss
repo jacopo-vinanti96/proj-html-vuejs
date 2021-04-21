@@ -4,7 +4,8 @@
 }
 
 p, input, span {
-  font-family: sans-serif;
+  font-family: 'Mada', sans-serif;
+  font-size: $font_size_400;
 }
 
 a {
@@ -12,7 +13,7 @@ a {
 }
 
 .btn {
-  font-size: $font_size_300;
+  font-size: $font_size_200;
 }
 
 .section--inverted {
@@ -31,7 +32,7 @@ h1 {
 }
 
 h1 ~ p {
-  font-size: $font_size_400;
+  font-size: $font_size_550;
   line-height: 180%;
 }
 
@@ -85,6 +86,10 @@ p {
     color: $font_color_4;
   }
 
+  .exposition_card p {
+    font-size: $font_size_300;
+  }
+
   .exposition_card span {
     font-size: $font_size_200;
   }
@@ -98,5 +103,11 @@ p {
   }
   h3 {
     font-size: $font_size_500;
+  }
+}
+
+#newsletter {
+  h3 {
+  font-size: 35px;
   }
 }
