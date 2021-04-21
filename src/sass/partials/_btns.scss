@@ -2,6 +2,7 @@
 .btn {
   display: inline-block;
   white-space: nowrap;
+  font-size: $font_size_200;
 
   &--function {
     border: none;
@@ -38,9 +39,21 @@
 
   &--xsmall {
     height: 42px;
-    line-height: 38px;
+    line-height: 42px;
     padding: 0 25px;
     border-radius: 20px;
+  }
+
+  &--query {
+    border: 2px solid $border_color_light;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+    border-radius: 32px;
+  }
+
+  &--query:not(:last-child) {
+    margin-right: 10px;
   }
 
   &--circle,
@@ -61,7 +74,8 @@
     color: $font_color_light;
   }
 
-  &--primary {
+  &--primary,
+  &--query {
     background-color: $bg_color_primary;
     color: $font_color_light;
   }

@@ -10,11 +10,13 @@ footer {
 }
 
 .footer__wrapper-2 {
-  width: 29%;
+  width: 28%;
 }
 
 .footer__wrapper-3 {
-  width: 29%;
+  text-align: right;
+  padding-left: 1%;
+  width: 30%;
 }
 
 .socials {
@@ -22,4 +24,8 @@ footer {
   li:not(:last-child) {
     margin-right: 15px;
   }
+}
+
+.copyright {
+  display: block;
 }

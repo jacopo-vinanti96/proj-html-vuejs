@@ -12,14 +12,15 @@ a {
   text-decoration: none;
 }
 
-.btn {
-  font-size: $font_size_200;
-}
-
 .section--inverted {
   h2, h3, h4, span, p {
   color: $font_color_light;
   }
+}
+
+#top-bar .btn--secondary,
+footer .btn--query {
+  text-transform: uppercase;
 }
 
 // Header
@@ -118,12 +119,31 @@ footer {
   h4 {
     font-size: $font_size_500;
   }
-  a {
+  a,
+  .btn--query {
     font-family: 'Mada', sans-serif;
+  }
+
+  a {
     font-size: $font_size_400;
   }
+
+  .btn--query {
+    font-size: $font_size_100;
+  }
+
   a:visited {
     color: white;
+  }
+
+  .footer__wrapper-3 {
+    h4 {
+      font-size: $font_size_300;
+    }
+  }
+
+  .copyright {
+    color: $font_color_secondary
   }
 
 }

@@ -12,24 +12,26 @@ if ( partnersSum > partnersWidth ) {
   }
 }
 
-const footerApp = new Vue({
-  el: '#footer-root',
+const app = new Vue({
+  el: '#app',
   data: {
-    socialLinks: [
-      {
-        icon: 'fa-facebook-f',
-        link: '#',
-      },
-      {
-        icon: 'fa-twitter',
-        link: '#',
-      },
-      {
-        icon: 'fa-instagram',
-        link: '#',
-      },
-    ],
-    footerLinks: [
+    footer: {
+      search: '',
+      socialLinks: [
+        {
+          icon: 'fa-facebook-f',
+          link: '#',
+        },
+        {
+          icon: 'fa-twitter',
+          link: '#',
+        },
+        {
+          icon: 'fa-instagram',
+          link: '#',
+        },
+      ],
+      links: [
         {
           title: 'Get EduPrime',
           links: [
@@ -88,9 +90,15 @@ const footerApp = new Vue({
             },
           ]
         },
-    ],
-    searchCategories: [
-      'economy', 'design', 'coaching', 'business', 'medicine', 'law', 'fitness'
-    ],
+      ],
+      searchCategories: [
+        'economy', 'design', 'coaching', 'business', 'medicine', 'law', 'fitness'
+      ],
+    }
+  },
+  methods: {
+    inputQuery (query) {
+      this.footer.search = query;
+    }
   }
 })
