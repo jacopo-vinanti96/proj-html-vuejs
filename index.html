@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Mada:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <title>Eduprime - Home</title>
 </head>
@@ -215,11 +216,52 @@
       </div>
     </section>
     <section id="partners">
-
+      <div class="container--medium">
+        <h3>Partners</h3>
+        <p class="mt-60 m-auto">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy.</p>
+        <ul class="partner_logos flex_center mt-50">
+          <li>
+            <img class="partner" src="images/partner-2.png" alt="medals logo">
+          </li>
+          <li>
+            <img class="partner" src="images/partner-3.png" alt="partner logo">
+          </li>
+          <li>
+            <img class="partner" src="images/partner-4.png" alt="partner logo">
+          </li>
+          <li>
+            <img class="partner" src="images/partner-5.png" alt="School building logo">
+          </li>
+          <li>
+            <img class="partner" src="images/partner-6.png" alt="handmade logo">
+          </li>
+          <li>
+            <img class="partner" src="images/partner-8.png" alt="partner logo">
+          </li>
+          <li>
+            <img class="partner" src="images/partner-1.png" alt="Paperplane logo">
+          </li>
+          <li>
+            <img class="partner" src="images/partner-7.png" alt="commmunication logo">
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
-  <footer>
+  <footer id="footer-root" class="section--inverted">
+    <div class="container--medium flex_center">
+      <div class="footer__wrapper">
+        <img class="logo" src="images/theme_eduprime_logo.png" alt="Eduprime logo">
+        <p class="mt-40"></p>
+        <a v-for="social in socialLinks" class="btn btn--social-inverted" href="social.link"><i class="fab" :class="social.icon"></i></a>
+      </div>
+      <div class="footer__wrapper">
 
+      </div>
+      <div class="footer__wrapper">
+
+      </div>
+    </div>
   </footer>
   <script src="js/script.js" charset="utf-8"></script>
 </body>

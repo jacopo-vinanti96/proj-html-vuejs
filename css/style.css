@@ -119,6 +119,10 @@ ul {
   align-items: center;
 }
 
+.logo {
+  width: 240px;
+}
+
 .container--medium {
   width: 70%;
   margin-right: auto;
@@ -150,6 +154,7 @@ ul {
   width: 42%;
 }
 .input-text_container input {
+  padding-left: 5%;
   height: 70px;
   border-radius: 70px;
   border: none;
@@ -198,11 +203,13 @@ h2, h3 {
   color: #223441;
 }
 
-h2 {
+h2,
+#partners h3 {
   font-size: 45px;
 }
 
-h2 ~ p {
+h2 ~ p,
+h3 ~ p {
   color: #223441;
 }
 
@@ -352,10 +359,6 @@ header > * {
 
 #top-bar li:not(:last-child) {
   margin-right: 30px;
-}
-
-.logo {
-  width: 240px;
 }
 
 details > summary {
@@ -586,4 +589,43 @@ details > summary::after {
 
 #newsletter {
   padding: 60px 0;
+}
+
+#partners {
+  padding-top: 80px;
+  text-align: center;
+}
+#partners::after {
+  margin-top: 40px;
+  margin-bottom: -100px;
+  content: "";
+  background-image: url("../images/background-wave3.png");
+  background-color: #F7F8FA;
+  height: 400px;
+  width: 100%;
+  display: block;
+}
+#partners p {
+  width: 535px;
+}
+#partners .partner_logos {
+  width: 100%;
+}
+#partners .partner_logos li {
+  position: relative;
+  padding-top: 5%;
+}
+#partners .partner_logos li img {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+footer {
+  padding: 170px 0 100px;
+}
+
+.footer__wrapper {
+  width: 30%;
 }

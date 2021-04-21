@@ -22,6 +22,10 @@ ul {
   align-items: center;
 }
 
+.logo {
+  width: 240px;
+}
+
 .container--medium {
   width: 70%;
   margin-right: auto;
@@ -61,6 +65,7 @@ ul {
 .input-text_container {
   width: 42%;
   input {
+    padding-left: 5%;
     height: 70px;
     border-radius: 70px;
     border: none;

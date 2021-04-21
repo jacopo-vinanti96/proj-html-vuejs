@@ -42,11 +42,13 @@ h2, h3 {
   color: $font_color_11;
 }
 
-h2 {
+h2,
+#partners h3 {
   font-size: $font_size_800;
 }
 
-h2 ~ p {
+h2 ~ p,
+h3 ~ p {
   color: $font_color_11;
 }
 
