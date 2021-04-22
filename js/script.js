@@ -2,8 +2,106 @@ const app = new Vue({
   el: '#app',
   data: {
     header: {
+      openIndex: null,
       searchBtnClass: false,
       searchTxtClass: false,
+      links: [
+        {
+          dropdown: true,
+          summary: 'Home',
+          items: [
+            {
+              txt: 'Presentation',
+              href: '#presentation'
+            },
+            {
+              txt: 'Schedule',
+              href: '#schedule'
+            },
+            {
+              txt: 'Features',
+              href: '#latest'
+            },
+          ]
+        },
+        {
+          dropdown: true,
+          summary: 'Courses',
+          items: [
+            {
+              txt: 'Law',
+              href: '#'
+            },
+            {
+              txt: 'Economy',
+              href: '#'
+            },
+            {
+              txt: 'Medicine',
+              href: '#'
+            },
+            {
+              txt: 'Computer science',
+              href: '#'
+            },
+            {
+              txt: 'Graphic design',
+              href: '#'
+            },
+          ]
+        },
+        {
+          dropdown: false,
+          txt: 'About Us',
+          href: '#'
+        },
+        {
+          dropdown: true,
+          summary: 'News',
+          items: [
+            {
+              txt: 'Law',
+              href: '#'
+            },
+            {
+              txt: 'Economy',
+              href: '#'
+            },
+            {
+              txt: 'Medicine',
+              href: '#'
+            },
+          ]
+        },
+        {
+          dropdown: true,
+          summary: 'Pages',
+          items: [
+            {
+              txt: 'Law',
+              href: '#'
+            },
+            {
+              txt: 'Economy',
+              href: '#'
+            },
+            {
+              txt: 'Medicine',
+              href: '#'
+            },
+          ]
+        },
+        {
+          dropdown: false,
+          txt: 'Contact',
+          href: '#'
+        },
+        {
+          dropdown: false,
+          txt: 'Purchase',
+          href: '#'
+        },
+      ]
     },
     footer: {
       search: '',
@@ -105,6 +203,11 @@ const app = new Vue({
           }, 500);
         }
       }
+    },
+    setOpen(i) {
+      window.setTimeout( () => {
+        this.header.openIndex = i;
+      }, 1)
     }
   }
 })

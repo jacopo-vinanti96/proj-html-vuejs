@@ -422,23 +422,33 @@ header > * {
 
 #top-bar {
   padding: 50px 45px 0;
+  z-index: 5;
 }
 
 #top-bar li:not(:last-child) {
   margin-right: 30px;
 }
 
-details > summary {
+details {
+  position: relative;
+  z-index: 5;
+}
+details summary {
   list-style: none;
 }
-
-details > summary::after {
+details summary::after {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
   color: #FFFFFF;
   margin-left: 10px;
   font-size: 14px;
+}
+details ul {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  background-color: #148277;
 }
 
 #hero {

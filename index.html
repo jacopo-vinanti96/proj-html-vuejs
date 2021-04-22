@@ -19,31 +19,19 @@
         <img class="logo" src="images/theme_eduprime_logo.png" alt="Eduprime logo">
         <nav>
           <ul class="flex_center">
-            <li>
-              <details>
-                <summary>Home</summary>
+            <li v-for="(link, i) in header.links">
+              <details v-if="link.dropdown == true" @click="setOpen(i)" :open="header.openIndex == i ? true : false">
+                <summary>{{link.summary}}</summary>
+                <ul class="mt-10">
+                  <li class="mt-10" v-for="item in link.items">
+                    <a :href="item.href">{{item.txt}}</a>
+                  </li>
+                </ul>
               </details>
+              <a v-else :href="link.href">{{link.txt}}</a>
             </li>
             <li>
-              <details>
-                <summary>Courses</summary>
-              </details>
-            </li>
-            <li><a href="#">About Us</a></li>
-            <li>
-              <details>
-                <summary>News</summary>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Pages</summary>
-              </details>
-            </li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Purchase</a></li>
-            <li>
-              <a class="btn btn--medium btn--secondary" href="#">VIEW COURSES</a>
+              <a href="#" class="btn btn--medium btn--secondary">view courses</a>
             </li>
           </ul>
         </nav>
