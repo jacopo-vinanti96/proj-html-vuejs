@@ -43,7 +43,7 @@ ul {
   position: relative;
 }
 
-// Classi ripetute
+// Repeated classes
 @for $i from 1 through 26 {
   .mt-#{$i * 5} {
     margin-top: $i * 5px;
@@ -67,7 +67,7 @@ ul {
   background-color: $bg_color_primary;
 }
 
-// Classe per le barre di input
+// Input container settings
 .input-text_container {
   position: relative;
   input {
@@ -84,7 +84,7 @@ ul {
   }
 }
 
-// Per cambiare il colore delle immagini
+// Change img primary color
 .img--primary {
   filter: hue-rotate(175deg);
 }

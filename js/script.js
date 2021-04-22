@@ -1,10 +1,12 @@
 const app = new Vue({
   el: '#app',
   data: {
+    //------------ Header data ------------
     header: {
       openIndex: null,
       searchBtnClass: false,
       searchTxtClass: false,
+      // Nav links and dropdown lists
       links: [
         {
           dropdown: true,
@@ -103,8 +105,10 @@ const app = new Vue({
         },
       ]
     },
+    //---------- Main Data ------------
     main: {
       facultyIndex: 0,
+      // Faculty boxes data
       faculties: [
         {
           src: 'Gavel-v2.png',
@@ -132,6 +136,7 @@ const app = new Vue({
           title: 'Graphic Design',
         },
       ],
+      // Faculty overviw data
       overviews: [
         {
           title: 'Law faculty',
@@ -165,8 +170,10 @@ const app = new Vue({
         },
       ]
     },
+    // ------------ Footer Data ------------
     footer: {
       search: '',
+      // Social links
       socialLinks: [
         {
           icon: 'fa-facebook-f',
@@ -181,6 +188,7 @@ const app = new Vue({
           link: '#',
         },
       ],
+      // Footer columns containing links
       links: [
         {
           title: 'Get EduPrime',
@@ -241,22 +249,25 @@ const app = new Vue({
           ]
         },
       ],
+      // Top searched categories for query btns
       searchCategories: [
         'economy', 'design', 'coaching', 'business', 'medicine', 'law', 'fitness'
       ],
     }
   },
   methods: {
+    //Insert selected query in input
     inputQuery (query) {
       this.footer.search = query;
     },
+    //Reduces search btn size to show input
     expandInput() {
       if ( this.header.searchBtnClass == false ) {
         this.header.searchBtnClass = true;
         this.header.searchTxtClass = true;
       } else {
-        //Funzione search qui
-        //Reset del bottone
+        //Search function here...
+        //Btn reset
         if ( this.footer.search == '' ) {
           this.header.searchBtnClass = false;
           window.setTimeout( () => {
@@ -266,9 +277,11 @@ const app = new Vue({
         }
       }
     },
+    //Faculty carousel setActive
     setActive(i) {
       this.main.facultyIndex = i;
     },
+    //Nav setOpen dropdown list
     setOpen(i) {
       window.setTimeout( () => {
         this.header.openIndex = i;
