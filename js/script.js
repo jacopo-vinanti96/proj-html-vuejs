@@ -103,6 +103,36 @@ const app = new Vue({
         },
       ]
     },
+    main: {
+      facultyIndex: null,
+      faculties: [
+        {
+          src: 'Gavel-v2.png',
+          alt: 'law faculty icon',
+          title: 'Law faculty',
+        },
+        {
+          src: 'Coins-tabs-v2.png',
+          alt: 'economy icon',
+          title: 'Economy',
+        },
+        {
+          src: 'Medicine-tabs-v2.png',
+          alt: 'medicine icon',
+          title: 'Medicine',
+        },
+        {
+          src: 'Computer-tabs-v2.png',
+          alt: 'computer icon',
+          title: 'Computer Science',
+        },
+        {
+          src: 'Palette-tabs-v2.png',
+          alt: 'Graphic Design icon',
+          title: 'Graphic Design',
+        },
+      ]
+    },
     footer: {
       search: '',
       socialLinks: [
@@ -188,7 +218,7 @@ const app = new Vue({
     inputQuery (query) {
       this.footer.search = query;
     },
-    setActive() {
+    expandInput() {
       if ( this.header.searchBtnClass == false ) {
         this.header.searchBtnClass = true;
         this.header.searchTxtClass = true;
@@ -203,6 +233,9 @@ const app = new Vue({
           }, 500);
         }
       }
+    },
+    setActive(i) {
+      this.main.facultyIndex = i;
     },
     setOpen(i) {
       window.setTimeout( () => {

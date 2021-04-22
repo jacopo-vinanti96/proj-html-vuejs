@@ -13,6 +13,7 @@
 }
 
 .selector__bar {
+  padding: 0 15%;
   display: flex;
   justify-content: center;
   box-shadow: 0 0 15px $border_color_1;
@@ -21,12 +22,36 @@
 }
 
 .faculty_box {
-  padding: 42px 70px;
+  width: calc( 100% / 5 );
+  padding: 3%;
   border-left: 1px solid $border_color_1;
   border-right: 1px solid $border_color_1;
+  text-align: center;
+  position: relative;
+
+  &:hover,
+  &.active {
+    background-color: $bg_color_primary;
+    * {
+      filter: brightness(800%);
+    }
+  }
+
+  &.active::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 100%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $bg_color_primary;
+  }
 
   img {
-    width: 108px;
+    width: 65%;
   }
 }
 

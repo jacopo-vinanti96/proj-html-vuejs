@@ -76,3 +76,8 @@ ul {
     right: 0;
   }
 }
+
+// Per cambiare il colore delle immagini
+.img--primary {
+  filter: hue-rotate(175deg);
+}

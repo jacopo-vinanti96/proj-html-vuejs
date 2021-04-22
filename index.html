@@ -43,7 +43,7 @@
           <div class="hero__actions mt-50">
             <div class="input-text_container">
               <input type="text" name="search-bar" v-model="footer.search" value="" placeholder="Search...">
-              <button @click="setActive()" class="btn btn--function btn--big btn--secondary" :class="{ 'active' : header.searchBtnClass == true }" type="button" name="button"><i class="fas fa-search"></i> <span v-show="header.searchTxtClass != true"> Search courses</span></button>
+              <button @click="expandInput()" class="btn btn--function btn--big btn--secondary" :class="{ 'active' : header.searchBtnClass == true }" type="button" name="button"><i class="fas fa-search"></i> <span v-show="header.searchTxtClass != true"> Search courses</span></button>
             </div>
             <button class="btn btn--function btn--big btn--inverted" type="button" name="button"><i class="fas fa-user-plus btn--inverted"></i> Apply for university</button>
           </div>
@@ -72,9 +72,9 @@
           to satisfy any student's needs.</p>
           <div class="faculties__selector mt-50">
             <div class="selector__bar">
-              <div class="faculty_box">
-                <img src="images/Gavel-v2.png" alt="law faculty icon">
-                <h3 class="mt-10">Law faculty</h3>
+              <div v-for="(faculty, i) in main.faculties" @click="setActive(i)" class="faculty_box" :class="{ 'active' : main.facultyIndex == i }">
+                <img class="img--primary" :src="'images/' + faculty.src" alt="faculty.alt">
+                <h3 class="mt-10">{{ faculty.title }}</h3>
               </div>
             </div>
             <div class="faculty_overview flex_center container--small mt-80">
@@ -150,28 +150,28 @@
           <h2>Latest courses</h2>
           <div class="card_container mt-80">
             <div class="exposition_card">
-              <img src="images/Decisions-icon.png" alt="idea icon">
+              <img class="img--primary" src="images/Decisions-icon.png" alt="idea icon">
               <h3 class="mt-20">Make better decisions</h3>
               <span class="mt-15"><i class="far fa-user"></i> Teacher: <span class="font--darker">James Colins</span></span>
               <span class="mt-15"><i class="far fa-money-bill-alt"></i> Price: <span class="font--darker">$21.00</span></span>
               <a class="btn btn--primary btn--small" href="#"><i class="far fa-eye"></i> View Course</a>
             </div><!--
               !--><div class="exposition_card">
-              <img src="images/Speaker-icon.png" alt="microphone icon">
+              <img class="img--primary" src="images/Speaker-icon.png" alt="microphone icon">
               <h3 class="mt-20">How to be a speaker</h3>
               <span class="mt-15"><i class="far fa-user"></i> Teacher: <span class="font--darker">James Colins</span></span>
               <span class="mt-15"><i class="far fa-money-bill-alt"></i> Price: <span class="font--darker">Free</span></span>
               <a class="btn btn--primary btn--small" href="#"><i class="far fa-eye"></i> View Course</a>
             </div><!--
               !--><div class="exposition_card">
-              <img src="images/Network-icon.png" alt="network icon">
+              <img class="img--primary" src="images/Network-icon.png" alt="network icon">
               <h3 class="mt-20">Network introduction</h3>
               <span class="mt-15"><i class="far fa-user"></i> Teacher: <span class="font--darker">James Colins</span></span>
               <span class="mt-15"><i class="far fa-money-bill-alt"></i> Price: <span class="font--darker">Free</span></span>
               <a class="btn btn--primary btn--small" href="#"><i class="far fa-eye"></i> View Course</a>
             </div><!--
               !--><div class="exposition_card">
-              <img src="images/Brand-icon.png" alt="smartphones icon">
+              <img class="img--primary" src="images/Brand-icon.png" alt="smartphones icon">
               <h3 class="mt-20">Brand management</h3>
               <span class="mt-15"><i class="far fa-user"></i> Teacher: <span class="font--darker">James Colins</span></span>
               <span class="mt-15"><i class="far fa-money-bill-alt"></i> Price: <span class="font--darker">Free</span></span>
