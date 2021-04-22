@@ -21,6 +21,10 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     li {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
       &:not(:last-child) {
         margin-right: 15px;
       }

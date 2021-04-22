@@ -111,7 +111,8 @@
 
 .btn--inverted,
 header.section--inverted .btn--secondary:hover,
-header.section--inverted .btn--secondary:hover .fas {
+header.section--inverted .btn--secondary:hover .fas,
+header.section--inverted .btn--secondary:hover span {
   background-color: $bg_color_light;
   color: $font_color_primary;
 }

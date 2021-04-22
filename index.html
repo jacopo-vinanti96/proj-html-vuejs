@@ -53,7 +53,10 @@
         <p class="mt-50">EduPrime is the most versatile WordPress theme for educational purposes,
           showcasing universities, courses, secondary schools etc.</p>
           <div class="hero__actions mt-50">
-            <button class="btn btn--function btn--big btn--secondary" type="button" name="button"><i class="fas fa-search"></i> Search courses</button>
+            <div class="input-text_container">
+              <input type="text" name="search-bar" v-model="footer.search" value="" placeholder="Search...">
+              <button @click="setActive()" class="btn btn--function btn--big btn--secondary" :class="{ 'active' : header.searchBtnClass == true }" type="button" name="button"><i class="fas fa-search"></i> <span v-show="header.searchTxtClass != true"> Search courses</span></button>
+            </div>
             <button class="btn btn--function btn--big btn--inverted" type="button" name="button"><i class="fas fa-user-plus btn--inverted"></i> Apply for university</button>
           </div>
         </div>
@@ -255,9 +258,11 @@
             <button class="btn btn--function btn--secondary btn--circle" type="button" name="button"><i class="fas fa-search"></i></button>
           </div>
           <h4 class="mt-30">Search categories</h4>
-          <div class="mt-10">
-            <button v-for="query in footer.searchCategories" v-show="footer.search != query" @click="inputQuery(query)" class="btn btn--function btn--primary-bordered btn--query mt-10" type="button" name="button">{{query}}</button>
-          </div>
+          <ul class="queries mt-10">
+            <li v-for="query in footer.searchCategories" v-show="footer.search != query" @click="inputQuery(query)">
+              <button class="btn btn--function btn--primary-bordered btn--query mt-10" type="button" name="button">{{query}}</button>
+            </li>
+          </ul>
           <span class="copyright mt-20">ModelTheme. All rights reserved.</span>
         </div>
       </div>

@@ -26,6 +26,15 @@ footer {
   }
 }
 
+.queries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
 .copyright {
   display: block;
 }

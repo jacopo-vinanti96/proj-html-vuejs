@@ -1,6 +1,10 @@
 const app = new Vue({
   el: '#app',
   data: {
+    header: {
+      searchBtnClass: false,
+      searchTxtClass: false,
+    },
     footer: {
       search: '',
       socialLinks: [
@@ -86,5 +90,21 @@ const app = new Vue({
     inputQuery (query) {
       this.footer.search = query;
     },
+    setActive() {
+      if ( this.header.searchBtnClass == false ) {
+        this.header.searchBtnClass = true;
+        this.header.searchTxtClass = true;
+      } else {
+        //Funzione search qui
+        //Reset del bottone
+        if ( this.footer.search == '' ) {
+          this.header.searchBtnClass = false;
+          window.setTimeout( () => {
+            this.header.searchTxtClass = false;
+            this.$forceUpdate();
+          }, 500);
+        }
+      }
+    }
   }
 })

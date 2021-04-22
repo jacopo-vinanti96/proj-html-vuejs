@@ -63,10 +63,26 @@ details > summary::after {
   height: 70px;
 }
 
-.hero__actions .btn.btn--secondary {
+.hero__actions .btn.btn--secondary,
+.hero__actions .input-text_container input {
   position: absolute;
   margin-right: 15px;
   right: 50%;
+  width: 216.2px;
+  transition: width 0.5s;
+}
+
+.hero__actions .input-text_container .btn.btn--secondary {
+  z-index: 2;
+  padding: 0;
+}
+
+.hero__actions .input-text_container input {
+  color: $font_color_dark;
+}
+
+.hero__actions .input-text_container .btn--secondary.active {
+  width: 70px;
 }
 
 .hero__actions .btn.btn--inverted {
