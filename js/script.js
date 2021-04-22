@@ -104,7 +104,7 @@ const app = new Vue({
       ]
     },
     main: {
-      facultyIndex: null,
+      facultyIndex: 0,
       faculties: [
         {
           src: 'Gavel-v2.png',
@@ -130,6 +130,38 @@ const app = new Vue({
           src: 'Palette-tabs-v2.png',
           alt: 'Graphic Design icon',
           title: 'Graphic Design',
+        },
+      ],
+      overviews: [
+        {
+          title: 'Law faculty',
+          p: 'law',
+          src: 'Gavel-Illustration-e1556884768193.png',
+          href: '#',
+        },
+        {
+          title: 'Economy',
+          p: 'economics',
+          src: 'Economy.png',
+          href: '#',
+        },
+        {
+          title: 'Medicine',
+          p: 'medicine',
+          src: 'Medicine.png',
+          href: '#',
+        },
+        {
+          title: 'Comupter Science',
+          p: 'informatics',
+          src: 'Computer-Science.png',
+          href: '#',
+        },
+        {
+          title: 'Graphic Design',
+          p: 'graphics',
+          src: 'Graphic-Design.png',
+          href: '#',
         },
       ]
     },
