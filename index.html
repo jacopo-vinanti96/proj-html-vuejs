@@ -14,7 +14,7 @@
 </head>
 <body>
   <div id="app">
-    <header>
+    <header class="section--inverted">
       <div id="top-bar" class="flex_center">
         <img class="logo" src="images/theme_eduprime_logo.png" alt="Eduprime logo">
         <nav>
@@ -222,30 +222,9 @@
         <div class="container--medium">
           <h3>Partners</h3>
           <p class="mt-60 m-auto">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy.</p>
-          <ul class="partner_logos flex_center mt-50">
-            <li>
-              <img class="partner" src="images/partner-2.png" alt="medals logo">
-            </li>
-            <li>
-              <img class="partner" src="images/partner-3.png" alt="partner logo">
-            </li>
-            <li>
-              <img class="partner" src="images/partner-4.png" alt="partner logo">
-            </li>
-            <li>
-              <img class="partner" src="images/partner-5.png" alt="School building logo">
-            </li>
-            <li>
-              <img class="partner" src="images/partner-6.png" alt="handmade logo">
-            </li>
-            <li>
-              <img class="partner" src="images/partner-8.png" alt="partner logo">
-            </li>
-            <li>
-              <img class="partner" src="images/partner-1.png" alt="Paperplane logo">
-            </li>
-            <li>
-              <img class="partner" src="images/partner-7.png" alt="commmunication logo">
+          <ul class="partner_logos flex_center mt-30">
+            <li v-for="logo in 8" class="mt-20">
+              <img class="partner" :src="'images/partner-' + logo + '.png'" alt="'partner' + logo">
             </li>
           </ul>
         </div>

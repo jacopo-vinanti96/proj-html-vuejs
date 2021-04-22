@@ -17,14 +17,15 @@
   }
   .partner_logos {
     width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     li {
-      position: relative;
-      padding-top: 5%;
-      img {
-        position: absolute;
-        height: 100%;
-        bottom: 0;
-        left: 0;
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+      .partner {
+        height: 59.5px;
       }
     }
   }

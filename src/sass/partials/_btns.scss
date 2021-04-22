@@ -74,22 +74,6 @@
     color: $font_color_light;
   }
 
-  &--primary,
-  &--query {
-    background-color: $bg_color_primary;
-    color: $font_color_light;
-  }
-
-  &--secondary {
-    background-color: $bg_color_secondary;
-    color: $font_color_light;
-  }
-
-  &--inverted {
-    background-color: $bg_color_light;
-    color: $font_color_primary;
-  }
-
   &--inverted:visited {
     color: $font_color_primary;
   }
@@ -104,6 +88,32 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+// Colors
+.btn--primary,
+.btn--query,
+.section--inverted .btn--secondary:hover {
+  background-color: $bg_color_primary;
+  color: $font_color_light;
+}
+
+.btn--secondary,
+.btn--primary:hover {
+  background-color: $bg_color_secondary;
+  color: $font_color_light;
+}
+
+.btn--secondary:hover {
+  background-color: $bg_color_primary_dark;
+  color: $font_color_light;
+}
+
+.btn--inverted,
+header.section--inverted .btn--secondary:hover,
+header.section--inverted .btn--secondary:hover .fas {
+  background-color: $bg_color_light;
+  color: $font_color_primary;
 }
 
 // Shadows

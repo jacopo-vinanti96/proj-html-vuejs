@@ -10,25 +10,6 @@
   width: 45%;
 }
 
-#presentation {
-  padding-top: 100px;
-}
-
-#presentation::before {
-  display: block;
-  background-image: url('../images/home-background.png');
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-  content: '';
-  width: 100%;
-  height: 470px;
-  position: absolute;
-  right: 0;
-  top: 30px;
-  z-index: -1;
-}
-
 #features {
   .feature_box__text {
     p {
