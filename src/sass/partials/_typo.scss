@@ -3,7 +3,9 @@
   font-family: 'Fredoka One', sans-serif;
 }
 
-p, input, span {
+p, input, span,
+footer a,
+footer .btn--query {
   font-family: 'Mada', sans-serif;
   font-size: $font_size_400;
 }
@@ -12,22 +14,17 @@ a {
   text-decoration: none;
 }
 
-.section--inverted {
-  h2, h3, h4, span, p {
+.section--inverted * {
   color: $font_color_light;
-  }
 }
 
+// Uppercase
 #top-bar .btn--secondary,
 footer .btn--query {
   text-transform: uppercase;
 }
 
 // Header
-header * {
-  color: $font_color_light;
-}
-
 h1 {
   font-size: $font_size_900;
 }
@@ -37,26 +34,31 @@ h1 ~ p {
   line-height: 180%;
 }
 
-// Main
+// Colors
 
 h2, h3 {
   color: $font_color_11;
+  ~ p {
+    color: $font_color_11;
+  }
 }
 
+
+.copyright {
+  color: $font_color_secondary
+}
+
+// Size
 h2,
 #partners h3 {
   font-size: $font_size_800;
-}
-
-h2 ~ p,
-h3 ~ p {
-  color: $font_color_11;
 }
 
 p {
   line-height: 150%;
 }
 
+//Faculties
 .faculty_box h3 {
   color: $font_color_primary;
 }
@@ -69,19 +71,22 @@ p {
   p {
     color: $font_color_2;
   }
-
 }
 
-.schedule__table {
-  h3 {
-    font-size: $font_size_500;
-  }
-}
-
+// Schedule
 #schedule {
-  .exposition_card h3 {
+
+  .schedule__table {
+    h3 {
+      font-size: $font_size_500;
+    }
+  }
+
+  .exposition_card {
+    h3 {
     color: $font_color_11;
     font-size: $font_size_600;
+    }
   }
 
   .exposition_card span,
@@ -92,48 +97,39 @@ p {
   .exposition_card p {
     font-size: $font_size_300;
   }
-
-  .exposition_card span {
-    font-size: $font_size_200;
-  }
 }
 
+// Exposition card common
+.exposition_card span {
+  font-size: $font_size_200;
+}
+
+// Latest
 #latest {
   .exposition_card
   span {
     color: $font_color_7;
-    font-size: $font_size_200;
   }
   h3 {
     font-size: $font_size_500;
   }
 }
 
+// Newsletter
 #newsletter {
   h3 {
   font-size: 35px;
   }
 }
 
+// Footer
 footer {
   h4 {
     font-size: $font_size_500;
   }
-  a,
-  .btn--query {
-    font-family: 'Mada', sans-serif;
-  }
 
-  a {
-    font-size: $font_size_400;
-  }
-
-  .btn--query {
+  .btn.btn--query {
     font-size: $font_size_100;
-  }
-
-  a:visited {
-    color: white;
   }
 
   .footer__wrapper-3 {
@@ -141,9 +137,4 @@ footer {
       font-size: $font_size_300;
     }
   }
-
-  .copyright {
-    color: $font_color_secondary
-  }
-
 }

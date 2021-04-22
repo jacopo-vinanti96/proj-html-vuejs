@@ -29,52 +29,17 @@ header {
 
 }
 
-// Top-bar
-#top-bar {
-  padding: 50px 45px 0;
-  z-index: 5;
-}
-
-#top-bar li:not(:last-child) {
-  margin-right: 30px;
-}
-
-details {
-  position: relative;
-  z-index: 5;
-  summary {
-    list-style: none;
-
-    &::after {
-      font-family: "Font Awesome 5 Free";
-      content: "\f0d7";
-      font-weight: 900;
-      color: $font_color_light;
-      margin-left: 10px;
-      font-size: 14px;
-    }
-  }
-
-  ul {
-    padding-left: 10px;
-    padding-bottom: 10px;
-    position: absolute;
-    background-color: $bg_color_primary_dark;
-  }
-}
-
+// sezione Hero
 #hero {
   width: 50%;
-  margin: auto;
   padding: 100px 0;
-  text-align: center;
 }
 
 .hero__actions {
-  position: relative;
   height: 70px;
 }
 
+// Input con animazione
 .hero__actions .btn.btn--secondary,
 .hero__actions .input-text_container input {
   position: absolute;
@@ -82,19 +47,14 @@ details {
   right: 50%;
   width: 216.2px;
   transition: width 0.5s;
+  &.active {
+    width: 70px;
+  }
 }
 
-.hero__actions .input-text_container .btn.btn--secondary {
+.hero__actions .btn.btn--secondary {
   z-index: 2;
   padding: 0;
-}
-
-.hero__actions .input-text_container input {
-  color: $font_color_dark;
-}
-
-.hero__actions .input-text_container .btn--secondary.active {
-  width: 70px;
 }
 
 .hero__actions .btn.btn--inverted {
@@ -103,7 +63,7 @@ details {
   left: 50%;
 }
 
-
+//Side-bar
 #side-bar {
   position: fixed;
   left: 0;

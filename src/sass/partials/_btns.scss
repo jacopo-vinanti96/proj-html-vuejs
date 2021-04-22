@@ -4,16 +4,7 @@
   white-space: nowrap;
   font-size: $font_size_200;
 
-  &--function {
-    border: none;
-    &:focus {
-      outline: none;
-    }
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
+  // Btn size
   &--big,
   &--medium {
     padding: 0 40px;
@@ -44,6 +35,17 @@
     border-radius: 20px;
   }
 
+  // Btn type
+  &--function {
+    border: none;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &--query {
     border: 2px solid $border_color_light;
     height: 35px;
@@ -68,6 +70,17 @@
     line-height: 70px;
   }
 
+
+  &--social-inverted {
+    border: 3px solid $border_color_secondary;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Reset link:visited
   &--primary:visited
   &--secondary:visited
   &--social-inverted:visited {
@@ -77,22 +90,12 @@
   &--inverted:visited {
     color: $font_color_primary;
   }
-
-  &--social-inverted {
-    background-color: $bg_color_primary;
-    color: $font_color_light;
-    border: 3px solid $border_color_secondary;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
-// Colors
+// Colors and :hover
 .btn--primary,
 .btn--query,
+.btn--social-inverted,
 .section--inverted .btn--secondary:hover {
   background-color: $bg_color_primary;
   color: $font_color_light;

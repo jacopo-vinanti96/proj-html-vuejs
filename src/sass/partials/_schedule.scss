@@ -1,8 +1,6 @@
 #schedule {
   padding: 230px 0 100px;
-  position: relative;
   overflow: hidden;
-  text-align: center;
 
   &::before,
   &::after {
@@ -34,15 +32,14 @@
 .table__text {
   display: inline-block;
   width: 35%;
-  position: relative;
-  margin: 0 2.5%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 
   &--top {
     left: 10%;
   }
 
   &--bottom {
-    margin-top: 20px;
     left: -10%;
   }
 }

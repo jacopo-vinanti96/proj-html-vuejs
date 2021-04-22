@@ -9,21 +9,11 @@ ul {
   list-style: none;
 }
 
-// Repeated classes
-@for $i from 1 through 26 {
-  .mt-#{$i * 5} {
-    margin-top: $i * 5px;
-  }
-}
-
+// Positioning
 .flex_center {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  width: 240px;
 }
 
 .container--medium {
@@ -40,8 +30,24 @@ ul {
   left: 3%;
 }
 
-.section--inverted {
-  background-color: $bg_color_primary;
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+// Classi ripetute
+@for $i from 1 through 26 {
+  .mt-#{$i * 5} {
+    margin-top: $i * 5px;
+  }
 }
 
 @mixin section-decoration {
@@ -53,15 +59,15 @@ ul {
   width: 2116px;
 }
 
-.m-auto {
-  margin-left: auto;
-  margin-right: auto;
+.logo {
+  width: 240px;
 }
 
-.pos-relative {
-  position: relative;
+.section--inverted {
+  background-color: $bg_color_primary;
 }
 
+// Classe per le barre di input
 .input-text_container {
   position: relative;
   input {
@@ -70,6 +76,7 @@ ul {
     border-radius: 70px;
     border: none;
     width: 100%;
+    color: $font_color_dark;
   }
   .btn {
     position: absolute;
