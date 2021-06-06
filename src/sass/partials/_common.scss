@@ -9,6 +9,16 @@ ul {
   list-style: none;
 }
 
+details:focus,
+summary:focus,
+input:focus {
+  outline: none;
+}
+
+summary {
+  cursor: pointer;
+}
+
 // Positioning
 .flex_center {
   display: flex;

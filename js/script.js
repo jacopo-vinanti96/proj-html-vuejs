@@ -108,6 +108,7 @@ const app = new Vue({
     //---------- Main Data ------------
     main: {
       facultyIndex: 0,
+      fadeInIndex: 0,
       // Faculty boxes data
       faculties: [
         {
@@ -276,6 +277,12 @@ const app = new Vue({
           }, 500);
         }
       }
+    },
+    //Fade in faculty overviews
+    fadeIn (i) {
+      window.setTimeout( () => {
+        this.main.fadeInIndex = i;
+      }, 1);
     },
     //Faculty carousel setActive
     setActive(i) {

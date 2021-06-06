@@ -9,6 +9,16 @@ ul {
   list-style: none;
 }
 
+details:focus,
+summary:focus,
+input:focus {
+  outline: none;
+}
+
+summary {
+  cursor: pointer;
+}
+
 .flex_center {
   display: flex;
   justify-content: space-between;
@@ -558,6 +568,7 @@ details ul {
   padding: 3%;
   border-left: 1px solid #ECECEE;
   border-right: 1px solid #ECECEE;
+  cursor: pointer;
 }
 .faculty_box:hover, .faculty_box.active {
   background-color: #20AD96;
@@ -581,12 +592,19 @@ details ul {
   width: 65%;
 }
 
+.faculty_overview {
+  opacity: 0;
+  transition: opacity 2s cubic-bezier(0.2, -0.24, 0.58, 1);
+}
 .faculty_overview__img {
   width: 35%;
 }
-
 .faculty_overview__text {
   width: 55%;
+}
+
+.fade_in {
+  opacity: 1;
 }
 
 #schedule {
@@ -749,11 +767,11 @@ footer .input-text_container {
 }
 
 .footer__wrapper-1 {
-  width: 33%;
+  width: 30%;
 }
 
 .footer__wrapper-2 {
-  width: 28%;
+  width: 30%;
 }
 
 .footer__wrapper-3 {

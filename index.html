@@ -68,28 +68,28 @@
       </section>
       <section id="faculties">
         <h2 class="text-center">Faculties available at EduPrime</h2>
-        <p class="mt-50 text-center m-auto">A single university with a load of courses, tailored
-          to satisfy any student's needs.</p>
-          <div class="faculties__selector mt-50">
-            <div class="selector__bar">
-              <div v-for="(faculty, i) in main.faculties" @click="setActive(i)" class="faculty_box pos-relative text-center" :class="{ 'active' : main.facultyIndex == i }">
-                <img class="img--primary" :src="'images/' + faculty.src" alt="faculty.alt">
-                <h3 class="mt-10">{{ faculty.title }}</h3>
-              </div>
+        <p class="mt-50 text-center m-auto">
+          A single university with a load of courses, tailored to satisfy any student's needs.
+        </p>
+        <div class="faculties__selector mt-50">
+          <div class="selector__bar">
+            <div v-for="(faculty, i) in main.faculties" @click="setActive(i); fadeIn(i);" class="faculty_box pos-relative text-center" :class="{ 'active' : main.facultyIndex == i }">
+              <img class="img--primary" :src="'images/' + faculty.src" alt="faculty.alt">
+              <h3 class="mt-10">{{ faculty.title }}</h3>
             </div>
-            <div v-for="( overview, i ) in main.overviews" v-show="main.facultyIndex == i" class="faculty_overview flex_center container--small mt-80">
-              <img :src="'images/' + overview.src" :alt="overview.title + ' illustration'" class="faculty_overview__img">
-              <div class="faculty_overview__text">
-                <h3 class="mt-20">{{overview.title}}</h3>
-                <p class="mt-40">Learning from world-leading academics and practitioners, you'll not only receive
-                  an outstanding grounding in the theory of {{overview.p}}, but you will be able to understand
-                  how those principles are applied in practice through a range of student-led
-                  activities and competitions.</p>
-                  <a class="btn btn--big btn--primary mt-35" href="#">Read more</a>
-                </div>
-              </div>
+          </div>
+          <div v-for="( overview, i ) in main.overviews" :class="{ 'fade_in' : main.fadeInIndex == i }" v-show="main.facultyIndex == i" class="faculty_overview flex_center container--small mt-80">
+            <img :src="'images/' + overview.src" :alt="overview.title + ' illustration'" class="faculty_overview__img">
+            <div class="faculty_overview__text">
+              <h3 class="mt-20">{{overview.title}}</h3>
+              <p class="mt-40">
+                Learning from world-leading academics and practitioners, you'll not only receive an outstanding grounding in the theory of {{overview.p}}, but you will be able to understand how those principles are applied in practice through a range of student-led activities and competitions.
+              </p>
+              <a class="btn btn--big btn--primary mt-35" href="#">Read more</a>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
       <section class="section--inverted mt-50 pos-relative text-center" id="schedule">
       <div class="container--schedule m-auto">
         <img class="schedule__icon" src="images/Clock-and-Bell.png" alt="Clock icon">
@@ -206,7 +206,7 @@
       </section>
       <section class="section--inverted mt-100" id="newsletter">
         <div class=" flex_center container--medium">
-          <h3>Subscribe Now to Our Newsletter !</h3>
+          <h3>Subscribe Now to Our Newsletter!</h3>
           <div class="input-text_container">
             <input type="text" name="email-input" value="" placeholder="Email address...">
             <button class="btn btn--function btn--circle btn--secondary" type="button" name="button"><i class="fas fa-paper-plane"></i></button>

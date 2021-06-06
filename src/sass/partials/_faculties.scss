@@ -20,6 +20,7 @@
   padding: 3%;
   border-left: 1px solid $border_color_1;
   border-right: 1px solid $border_color_1;
+  cursor: pointer;
 
   &:hover,
   &.active {
@@ -47,10 +48,18 @@
   }
 }
 
-.faculty_overview__img {
-  width: 35%;
+.faculty_overview {
+  opacity: 0;
+  transition: opacity 2s cubic-bezier(0.2, -0.24, 0.58, 1);
+  &__img {
+    width: 35%;
+  }
+
+  &__text {
+    width: 55%;
+  }
 }
 
-.faculty_overview__text {
-  width: 55%;
+.fade_in {
+  opacity: 1;
 }
